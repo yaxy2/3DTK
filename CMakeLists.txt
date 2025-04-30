@@ -123,7 +123,6 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${ADDITIONAL_OPENCV_FLAGS}")
 # Declare Options and modify build accordingly ##
 #################################################
 
-option(WITH_SEMIRIGIDREGISTRATION "Compile with semi rigid registration / continous time SLAM. ON/OFF" ON)
 option(WITH_CGAL "Compile with CGAL support" OFF)
 option(WITH_GMP "Compile with GMP support" OFF) # on Windows GMP is provided by MPIR
 option(WITH_LIBZIP "Compile with libzip support" ON)
