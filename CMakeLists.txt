@@ -283,18 +283,6 @@ endif()
 
 option(WITH_METRICS "Whether to use time metrics. ON/OFF" OFF)
 
-option(WITH_ADDONS "Whether to download and use addons to 3DTK. ON/OFF" OFF)
-if(WITH_ADDONS)
-  message(STATUS "Compiling addons directory")
-  #execute_process(COMMAND svn co https://robotik.informatik.uni-wuerzburg.de/slam6dprivate/trunk/addons addons
-  #                WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}
-  #                OUTPUT_QUIET
-  #                )
-  message(STATUS "With addons.")
-else()
-  message(STATUS "Without addons.")
-endif()
-
 #################################################
 # OPERATING SYSTEM SPECIFIC BEHAVIOUR          ##
 #################################################
@@ -480,11 +468,6 @@ endif()
 if(WITH_CALIB)
   message(STATUS "With calibration.")
   add_subdirectory(src/calibration)
-endif()
-
-if(WITH_ADDONS)
-  message(STATUS "With 3dtk addons.")
-  add_subdirectory(addons)
 endif()
 
 find_package(Boost COMPONENTS system filesystem unit_test_framework REQUIRED)
