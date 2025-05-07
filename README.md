@@ -11,7 +11,8 @@ For installation instructions on **Ubuntu**, **Debian** and **macOS**, please ha
 
 To compile the project simply call `make`. This will configure slam6d using the default settings. If you wish to configure the project using custom settings do: `make config`. This command requires _ccmake_ be installed on your system.  Alternatively you may change into the build directory `.build` and configure the project with your preferred cmake configurator, i.e.:
 ```
-cd .build && cmake -i ../
+mkdir .build
+cd .build && cmake ..
 ```
 For **Microsoft Windows**, use the _cmake-gui_ application provided by _cmake_ to configure and generate project files for the appropriate version of _Microsoft Visual Studio C++_ of your system. Use the `INSTALL`  target to built the entire project.  Executables (and .dll's) will then reside in the `windows` folder. For running the binaries you need to install the proper redistributable package.
 Alternatively on **Windows**, execute the batch script `build.cmd` either from the command line or from the Explorer. It will download and extract the right versions of _boost_ and _opencv_ and then run _cmake_ with the right configuration options.
